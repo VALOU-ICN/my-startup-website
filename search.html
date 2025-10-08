@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NovaBoutique | Recherche de produits</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/cart.js" defer></script>
+    <script src="js/search.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="NovaBoutique Accueil">
+          <span class="brand__logo">NB</span>
+          NovaBoutique
+        </a>
+        <nav class="main-nav" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="products.html">Produits</a>
+          <a href="search.html" aria-current="page">Recherche</a>
+          <a href="cart.html">Panier</a>
+          <a href="contact.html">Contact</a>
+          <a href="checkout.html">Paiement</a>
+        </nav>
+        <div class="cart-status">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218a1.5 1.5 0 0 0 1.47-1.198l1.2-6A1.5 1.5 0 0 0 19.125 6H5.106m2.394 8.25L5.106 6m0 0-.383-1.437A1.125 1.125 0 0 0 3.61 3H2.25" />
+          </svg>
+          <span>Panier <span data-cart-count>0</span></span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="section-heading">
+          <h1>Recherche avancée</h1>
+          <p>Affinez vos résultats par catégorie, prix ou mot-clé pour trouver la perle rare.</p>
+        </div>
+        <div class="search-panel">
+          <form data-search-form>
+            <div class="form-row">
+              <div>
+                <label for="search-keyword">Mot-clé</label>
+                <input type="search" id="search-keyword" name="keyword" placeholder="Lampe, casque, mug..." data-search-input />
+              </div>
+              <div>
+                <label for="search-category">Catégorie</label>
+                <select id="search-category" name="category" data-search-category>
+                  <option value="all">Toutes</option>
+                  <option value="tech">High-tech</option>
+                  <option value="home">Maison &amp; déco</option>
+                  <option value="mobility">Mobilité</option>
+                  <option value="wellness">Bien-être</option>
+                </select>
+              </div>
+              <div>
+                <label for="search-price">Budget</label>
+                <select id="search-price" name="price" data-search-price>
+                  <option value="all">Sans préférence</option>
+                  <option value="0-50">Moins de 50 €</option>
+                  <option value="50-100">Entre 50 € et 100 €</option>
+                  <option value="100-200">Entre 100 € et 200 €</option>
+                  <option value="200+">Plus de 200 €</option>
+                </select>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Rechercher</button>
+          </form>
+          <p class="text-muted">Astuce : combinez plusieurs filtres pour obtenir des résultats ultra-pertinents.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <h2>Résultats</h2>
+          <p><span data-search-count>6</span> produits correspondent à votre recherche.</p>
+        </div>
+        <div class="search-results" data-search-results>
+          <p class="search-empty">Saisissez un mot-clé ou ajustez les filtres pour commencer.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-grid">
+          <div>
+            <div class="brand">
+              <span class="brand__logo">NB</span>
+              NovaBoutique
+            </div>
+            <p class="text-muted">Marketplace créative basée à Paris, sélection de produits lifestyle, tech et déco.</p>
+          </div>
+          <div>
+            <h4>Découvrir</h4>
+            <ul class="grid">
+              <li><a href="products.html">Catalogue</a></li>
+              <li><a href="search.html">Recherche</a></li>
+              <li><a href="cart.html">Panier</a></li>
+              <li><a href="checkout.html">Paiement</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <ul class="grid">
+              <li>hello@novaboutique.fr</li>
+              <li>+33 1 83 00 00 00</li>
+              <li>Du lundi au vendredi — 9h/18h</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span id="current-year"></span> NovaBoutique. Tous droits réservés.</span>
+          <span class="text-muted">Fait avec passion à Paris.</span>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

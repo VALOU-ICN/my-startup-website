@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NovaBoutique | Paiement sécurisé</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/cart.js" defer></script>
+    <script src="js/checkout.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="NovaBoutique Accueil">
+          <span class="brand__logo">NB</span>
+          NovaBoutique
+        </a>
+        <nav class="main-nav" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="products.html">Produits</a>
+          <a href="search.html">Recherche</a>
+          <a href="cart.html">Panier</a>
+          <a href="contact.html">Contact</a>
+          <a href="checkout.html" aria-current="page">Paiement</a>
+        </nav>
+        <div class="cart-status">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218a1.5 1.5 0 0 0 1.47-1.198l1.2-6A1.5 1.5 0 0 0 19.125 6H5.106m2.394 8.25L5.106 6m0 0-.383-1.437A1.125 1.125 0 0 0 3.61 3H2.25" />
+          </svg>
+          <span>Panier <span data-cart-count>0</span></span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="section-heading">
+          <h1>Paiement sécurisé</h1>
+          <p>Renseignez vos informations pour finaliser votre commande en toute confiance.</p>
+        </div>
+        <div class="checkout-grid">
+          <form class="checkout-form" data-checkout-form>
+            <div class="alert is-hidden" role="alert" data-checkout-confirmation>
+              Merci ! Votre commande est confirmée. Un e-mail récapitulatif vient de vous être envoyé.
+            </div>
+            <div class="form-row">
+              <div>
+                <label for="billing-name">Nom complet</label>
+                <input type="text" id="billing-name" name="billing-name" placeholder="Camille Dupont" required />
+              </div>
+              <div>
+                <label for="billing-email">Adresse e-mail</label>
+                <input type="email" id="billing-email" name="billing-email" placeholder="vous@exemple.com" required />
+              </div>
+            </div>
+            <div>
+              <label for="billing-address">Adresse de facturation</label>
+              <input type="text" id="billing-address" name="billing-address" placeholder="12 rue de la Création, Paris" required />
+            </div>
+            <div class="form-row">
+              <div>
+                <label for="billing-city">Ville</label>
+                <input type="text" id="billing-city" name="billing-city" placeholder="Paris" required />
+              </div>
+              <div>
+                <label for="billing-zip">Code postal</label>
+                <input type="text" id="billing-zip" name="billing-zip" placeholder="75010" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div>
+                <label for="card-number">Numéro de carte</label>
+                <input type="text" id="card-number" name="card-number" inputmode="numeric" autocomplete="cc-number" placeholder="1234 5678 9012 3456" required />
+              </div>
+              <div>
+                <label for="card-expiry">Expiration</label>
+                <input type="text" id="card-expiry" name="card-expiry" placeholder="MM/AA" required />
+              </div>
+              <div>
+                <label for="card-cvc">CVC</label>
+                <input type="text" id="card-cvc" name="card-cvc" inputmode="numeric" autocomplete="cc-csc" placeholder="123" required />
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Valider le paiement</button>
+            <p class="text-muted">Paiement sécurisé via notre prestataire certifié PCI-DSS. Vos données sont chiffrées.</p>
+          </form>
+          <aside class="checkout-summary">
+            <h2>Récapitulatif commande</h2>
+            <ul data-checkout-items>
+              <li class="text-muted">Votre panier est vide.</li>
+            </ul>
+            <div class="flex flex-between">
+              <span>Total TTC</span>
+              <strong data-checkout-total>0,00 €</strong>
+            </div>
+            <p class="text-muted">Livraison standard offerte en France métropolitaine.</p>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-grid">
+          <div>
+            <div class="brand">
+              <span class="brand__logo">NB</span>
+              NovaBoutique
+            </div>
+            <p class="text-muted">Marketplace créative basée à Paris, sélection de produits lifestyle, tech et déco.</p>
+          </div>
+          <div>
+            <h4>Découvrir</h4>
+            <ul class="grid">
+              <li><a href="products.html">Catalogue</a></li>
+              <li><a href="search.html">Recherche</a></li>
+              <li><a href="cart.html">Panier</a></li>
+              <li><a href="checkout.html">Paiement</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <ul class="grid">
+              <li>hello@novaboutique.fr</li>
+              <li>+33 1 83 00 00 00</li>
+              <li>Du lundi au vendredi — 9h/18h</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span id="current-year"></span> NovaBoutique. Tous droits réservés.</span>
+          <span class="text-muted">Fait avec passion à Paris.</span>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
