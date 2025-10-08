@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>NovaBoutique | L'expérience shopping nouvelle génération</title>
+    <title>NovaBoutique | Catalogue produits</title>
     <link rel="stylesheet" href="css/styles.css" />
     <script src="js/cart.js" defer></script>
   </head>
@@ -15,8 +15,8 @@
           NovaBoutique
         </a>
         <nav class="main-nav" aria-label="Navigation principale">
-          <a href="index.html" aria-current="page">Accueil</a>
-          <a href="products.html">Produits</a>
+          <a href="index.html">Accueil</a>
+          <a href="products.html" aria-current="page">Produits</a>
           <a href="search.html">Recherche</a>
           <a href="cart.html">Panier</a>
           <a href="contact.html">Contact</a>
@@ -30,32 +30,32 @@
         </div>
       </div>
     </header>
+
     <main>
-      <section class="hero">
-        <div class="hero-content">
-          <div class="badge">Collection printemps 2024</div>
-          <h1>Des produits inspirants pour booster votre quotidien.</h1>
-          <p>
-            NovaBoutique rassemble des objets design, high-tech et lifestyle sélectionnés pour leur style et leur utilité. Composez votre
-            univers, du bureau au salon, avec une expérience d'achat fluide et moderne.
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="products.html">Explorer le catalogue</a>
-            <a class="btn btn-secondary" href="search.html">Trouver un produit précis</a>
-          </div>
+      <section class="section">
+        <div class="section-heading">
+          <h1>Catalogue complet</h1>
+          <p>Trouvez le produit qui s'intégrera parfaitement à votre quotidien.</p>
+        </div>
+        <div class="category-tabs" role="group" aria-label="Filtres de catégories">
+          <button type="button" aria-pressed="true">Tout</button>
+          <button type="button" aria-pressed="false">High-tech</button>
+          <button type="button" aria-pressed="false">Maison &amp; déco</button>
+          <button type="button" aria-pressed="false">Mobilité</button>
+          <button type="button" aria-pressed="false">Bien-être</button>
+        </div>
+        <div class="product-meta">
+          <span>Livraison offerte dès 80 € d'achat</span>
+          <span class="badge">Nouvelle sélection hebdomadaire</span>
         </div>
       </section>
 
       <section class="section">
-        <div class="section-heading">
-          <h2>Nos coups de cœur</h2>
-          <p>Une sélection de nouveautés à ajouter immédiatement à votre panier.</p>
-        </div>
         <div class="product-grid">
           <article class="product-card">
             <div class="product-card__image">Lampe Aurora</div>
             <h3>Lampe Aurora</h3>
-            <p>Un éclairage d'ambiance avec réglage intelligent pour créer la bonne atmosphère à tout moment.</p>
+            <p>Ambiance lumineuse personnalisable via application mobile et scénarios automatiques.</p>
             <div class="product-card__footer">
               <span class="price-tag">89,90 €</span>
               <button
@@ -72,7 +72,7 @@
           <article class="product-card">
             <div class="product-card__image product-card__image--secondary">Casque Serenity</div>
             <h3>Casque Serenity</h3>
-            <p>Réduction de bruit active et confort absolu pour rester concentré où que vous soyez.</p>
+            <p>Batterie 36 h, connectivité multipoint et réduction de bruit adaptative.</p>
             <div class="product-card__footer">
               <span class="price-tag">129,00 €</span>
               <button
@@ -87,9 +87,9 @@
             </div>
           </article>
           <article class="product-card">
-            <div class="product-card__image product-card__image--accent">Tracker Pulse</div>
+            <div class="product-card__image product-card__image--accent">Bracelet Pulse</div>
             <h3>Bracelet Pulse</h3>
-            <p>Suivi santé et sport avec analyse du sommeil et coaching personnalisé sur votre poignet.</p>
+            <p>Suivi d'activité, fréquence cardiaque continue et rapports santé enrichis.</p>
             <div class="product-card__footer">
               <span class="price-tag">59,50 €</span>
               <button
@@ -103,38 +103,57 @@
               </button>
             </div>
           </article>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-heading">
-          <h2>Pourquoi choisir NovaBoutique ?</h2>
-          <p>Une expérience pensée pour gagner du temps et dénicher la perle rare.</p>
-        </div>
-        <div class="feature-grid">
-          <article class="feature-card">
-            <span>01</span>
-            <h3>Catalogues évolutifs</h3>
-            <p>Un assortiment renouvelé chaque semaine en collaboration avec des créateurs et marques engagées.</p>
+          <article class="product-card">
+            <div class="product-card__image">Sac Nomad</div>
+            <h3>Sac à dos Nomad</h3>
+            <p>Compartiment ordinateur 16", matériaux recyclés et design waterproof pour vos déplacements.</p>
+            <div class="product-card__footer">
+              <span class="price-tag">149,00 €</span>
+              <button
+                class="btn btn-primary"
+                data-add-to-cart
+                data-product-id="nomad-backpack"
+                data-product-name="Sac à dos Nomad"
+                data-product-price="149"
+              >
+                Ajouter au panier
+              </button>
+            </div>
           </article>
-          <article class="feature-card">
-            <span>02</span>
-            <h3>Panier intelligent</h3>
-            <p>Ajoutez vos coups de cœur en un clic, retrouvez-les sur toutes vos pages et finalisez votre commande rapidement.</p>
+          <article class="product-card">
+            <div class="product-card__image product-card__image--secondary">Plaid Velvet</div>
+            <h3>Plaid Velvet</h3>
+            <p>Fibre ultra-douce, finition main et couleurs profondes pour un salon chaleureux.</p>
+            <div class="product-card__footer">
+              <span class="price-tag">74,25 €</span>
+              <button
+                class="btn btn-primary"
+                data-add-to-cart
+                data-product-id="velvet-throw"
+                data-product-name="Plaid Velvet"
+                data-product-price="74.25"
+              >
+                Ajouter au panier
+              </button>
+            </div>
           </article>
-          <article class="feature-card">
-            <span>03</span>
-            <h3>Support humain</h3>
-            <p>Une équipe disponible pour vous conseiller par chat, e-mail ou téléphone quand vous en avez besoin.</p>
+          <article class="product-card">
+            <div class="product-card__image product-card__image--accent">Set Mug</div>
+            <h3>Set mugs Atelier</h3>
+            <p>Lot de 4 mugs en céramique artisanale, cuisson double émaillage et anses confort.</p>
+            <div class="product-card__footer">
+              <span class="price-tag">39,90 €</span>
+              <button
+                class="btn btn-primary"
+                data-add-to-cart
+                data-product-id="artisan-mug"
+                data-product-name="Set mugs Atelier"
+                data-product-price="39.9"
+              >
+                Ajouter au panier
+              </button>
+            </div>
           </article>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="cta-card">
-          <h3>Besoin d'un accompagnement personnalisé ?</h3>
-          <p>Notre équipe retail peut composer pour vous une sélection sur mesure selon vos objectifs.</p>
-          <a class="btn btn-secondary" href="contact.html">Échanger avec nous</a>
         </div>
       </section>
     </main>

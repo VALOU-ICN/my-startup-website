@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NovaBoutique | Contact &amp; accompagnement</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/cart.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="NovaBoutique Accueil">
+          <span class="brand__logo">NB</span>
+          NovaBoutique
+        </a>
+        <nav class="main-nav" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="products.html">Produits</a>
+          <a href="search.html">Recherche</a>
+          <a href="cart.html">Panier</a>
+          <a href="contact.html" aria-current="page">Contact</a>
+          <a href="checkout.html">Paiement</a>
+        </nav>
+        <div class="cart-status">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218a1.5 1.5 0 0 0 1.47-1.198l1.2-6A1.5 1.5 0 0 0 19.125 6H5.106m2.394 8.25L5.106 6m0 0-.383-1.437A1.125 1.125 0 0 0 3.61 3H2.25" />
+          </svg>
+          <span>Panier <span data-cart-count>0</span></span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="contact-hero">
+          <div>
+            <div class="badge">Nous sommes là pour vous</div>
+            <h1>Contactez l'équipe NovaBoutique</h1>
+            <p>
+              Besoin d'un conseil produit, d'un accompagnement B2B ou d'un suivi de commande ? Notre équipe vous répond en moins de 24 h.
+            </p>
+          </div>
+          <div class="contact-grid">
+            <article class="contact-card">
+              <h3>Coordonnées directes</h3>
+              <ul>
+                <li>
+                  <span>Téléphone</span>
+                  +33 1 83 00 00 00 (lun. - ven. 9h/18h)
+                </li>
+                <li>
+                  <span>E-mail</span>
+                  hello@novaboutique.fr
+                </li>
+                <li>
+                  <span>Adresse</span>
+                  12 rue de la Création, 75010 Paris
+                </li>
+              </ul>
+            </article>
+            <article class="contact-card">
+              <h3>Suivi commande</h3>
+              <ul>
+                <li>
+                  <span>Compte client</span>
+                  Accédez à vos commandes et factures dans votre espace personnel.
+                </li>
+                <li>
+                  <span>Retours facilités</span>
+                  Retour gratuit pendant 30 jours sur simple demande via le formulaire.
+                </li>
+                <li>
+                  <span>Support live</span>
+                  Chat en direct disponible du lundi au samedi jusqu'à 20h.
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <form class="contact-form" data-contact-form>
+          <div class="form-row">
+            <div>
+              <label for="contact-name">Nom complet</label>
+              <input type="text" id="contact-name" name="name" placeholder="Camille Dupont" required />
+            </div>
+            <div>
+              <label for="contact-email">Adresse e-mail</label>
+              <input type="email" id="contact-email" name="email" placeholder="vous@exemple.com" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div>
+              <label for="contact-phone">Téléphone</label>
+              <input type="tel" id="contact-phone" name="phone" placeholder="06 00 00 00 00" />
+            </div>
+            <div>
+              <label for="contact-topic">Sujet</label>
+              <select id="contact-topic" name="topic" required>
+                <option value="">Sélectionnez un sujet</option>
+                <option value="order">Suivi de commande</option>
+                <option value="product">Question produit</option>
+                <option value="partnership">Partenariat &amp; B2B</option>
+                <option value="other">Autre demande</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label for="contact-message">Votre message</label>
+            <textarea id="contact-message" name="message" placeholder="Expliquez-nous comment nous pouvons aider." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Envoyer ma demande</button>
+          <p class="text-muted">Nous répondons sous 24 h ouvrées. Les données transmises sont utilisées uniquement pour vous répondre.</p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-grid">
+          <div>
+            <div class="brand">
+              <span class="brand__logo">NB</span>
+              NovaBoutique
+            </div>
+            <p class="text-muted">Marketplace créative basée à Paris, sélection de produits lifestyle, tech et déco.</p>
+          </div>
+          <div>
+            <h4>Découvrir</h4>
+            <ul class="grid">
+              <li><a href="products.html">Catalogue</a></li>
+              <li><a href="search.html">Recherche</a></li>
+              <li><a href="cart.html">Panier</a></li>
+              <li><a href="checkout.html">Paiement</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <ul class="grid">
+              <li>hello@novaboutique.fr</li>
+              <li>+33 1 83 00 00 00</li>
+              <li>Du lundi au vendredi — 9h/18h</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span id="current-year"></span> NovaBoutique. Tous droits réservés.</span>
+          <span class="text-muted">Fait avec passion à Paris.</span>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
